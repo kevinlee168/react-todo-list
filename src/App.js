@@ -94,14 +94,14 @@ function App(props) {
       </div>
 
 
-      <h2 id="list-heading">{headingText}</h2>
+      <h2 id="list-heading" tabindex="-1" >{headingText}</h2>
       <ul
         role="list"
         className="todo-list stack-large stack-exception"
         aria-labelledby="list-heading">
 
         {/* <Todo name="Eat" complete={true} id="todo-0" />
-        <Todo name="PTE" complete={false} id="todo-1" />
+        <Todo name="PTE" complete={false} id="todo-1" />œ
         <Todo name="Running" complete={false} id="todo-2" /> */}
 
         {taskList}
