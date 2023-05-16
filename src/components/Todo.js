@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import usePrevious from "./Tools";
 
 export default function Todo(props) {
     const [isEditing, setEditing] = useState(false);
@@ -7,14 +8,6 @@ export default function Todo(props) {
 
     const editFiledRef = useRef(null);
     const editButtonRef = useRef(null);
-
-    function usePrevious(value) {
-        const ref = useRef();
-        useEffect(() => {
-            ref.current = value;
-        });
-        return ref.current;
-    }
 
     const wasEditing = usePrevious(isEditing);
 
